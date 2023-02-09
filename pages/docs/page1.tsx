@@ -5,7 +5,7 @@ export default function Page1() {
     <>
       <main>
         <div>
-          <Link href="/docs">Home</Link>
+          <Link href="/docs">Docs (rewritten app)</Link>
         </div>
         <div>Page 1</div>
       </main>

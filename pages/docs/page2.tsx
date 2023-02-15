@@ -5,10 +5,10 @@ export default function Page2() {
     <>
       <main>
         <div>
-          <Link href="/docs/page1">Page 1 (rewritten app)</Link>
+          <Link href="/docs/page1">Page 1</Link>
         </div>
         <div>
-          <Link href="/docs/page2">Page 2 (rewritten app)</Link>
+          <Link href="/docs/page2">Page 2</Link>
         </div>
         <div>This is the rewritten app</div>
       </main>

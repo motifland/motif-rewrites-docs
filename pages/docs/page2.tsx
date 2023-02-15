@@ -11,6 +11,9 @@ export default function Page2() {
           <Link href="/docs/page2">Page 2</Link>
         </div>
         <div>This is the rewritten app</div>
+        <div>
+          <Link href="/">Back to host app</Link>
+        </div>
       </main>
     </>
   )

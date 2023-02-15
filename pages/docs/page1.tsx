@@ -5,9 +5,9 @@ export default function Page1() {
     <>
       <main>
         <div>
-          <Link href="/docs">Docs (rewritten app)</Link>
+          <Link href="/docs/page1">Page 1 (rewritten app)</Link>
+          <Link href="/docs/page2">Page 2 (rewritten app)</Link>
         </div>
-        <div>Page 1</div>
       </main>
     </>
   )

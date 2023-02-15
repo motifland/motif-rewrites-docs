@@ -1454,7 +1454,7 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next@canary:
+next@next@canary:
   version "13.1.7-canary.13"
   resolved "https://registry.yarnpkg.com/next/-/next-13.1.7-canary.13.tgz#a2d439d2853e234ee687545a1873ceab26a17514"
   integrity sha512-hoE1Ei9GpbX1PwYCJwpmkGn+x9tdBi2/khCVMGizAhwgZCiZRVGwKbOyQ9ngKfcBvo03YQhCUAkBnygCBWYnRw==

@@ -23,13 +23,12 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
   // }
 
   // console.log('pathname', pathname)
-  // if (pathname.startsWith('/docs')) {
-  //   const path = `/domains/test${pathname}`
-  //   const url = req.nextUrl.clone()
-  //   url.pathname = path
-  //   console.log('Rewrite to', path)
-  //   return NextResponse.rewrite(url)
-  // }
+  if (pathname.startsWith('/docs')) {
+    const path = `/domains/test${pathname}`
+    const url = req.nextUrl.clone()
+    url.pathname = path
+    return NextResponse.rewrite(url)
+  }
 
   return NextResponse.next()
 }

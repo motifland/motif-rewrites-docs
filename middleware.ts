@@ -18,7 +18,7 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     const parts = pathname.split('/')
     const newPathname = [
       ...parts.slice(0, 4),
-      'with-getstaticprops',
+      'without-getstaticprops',
       ...parts.slice(4),
     ].join('/')
     url.pathname = newPathname

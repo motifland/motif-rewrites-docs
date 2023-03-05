@@ -13,15 +13,13 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     return NextResponse.rewrite(url)
   }
 
+  // The critical thing
   if (pathname.startsWith('/_next/data/')) {
     const url = req.nextUrl.clone()
     const parts = pathname.split('/')
-    const newPathname = [
-      ...parts.slice(0, 4),
-      'without-getstaticprops',
-      ...parts.slice(4),
-    ].join('/')
+    const newPathname = [...parts.slice(0, 4), ...parts.slice(4)].join('/')
     url.pathname = newPathname
+    console.log('newPathname', JSON.stringify(newPathname, null, 2))
     return NextResponse.rewrite(url)
   }
 

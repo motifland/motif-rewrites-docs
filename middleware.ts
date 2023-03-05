@@ -13,17 +13,17 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     return NextResponse.rewrite(url)
   }
 
-  if (pathname.startsWith('/_next/data/')) {
-    const url = req.nextUrl.clone()
-    const parts = pathname.split('/')
-    const newPathname = [
-      ...parts.slice(0, 4),
-      'with-getstaticprops',
-      ...parts.slice(4),
-    ].join('/')
-    url.pathname = newPathname
-    return NextResponse.rewrite(url)
-  }
+  // if (pathname.startsWith('/_next/data/')) {
+  //   const url = req.nextUrl.clone()
+  //   const parts = pathname.split('/')
+  //   const newPathname = [
+  //     ...parts.slice(0, 4),
+  //     'with-getstaticprops',
+  //     ...parts.slice(4),
+  //   ].join('/')
+  //   url.pathname = newPathname
+  //   return NextResponse.rewrite(url)
+  // }
 
   if (pathname.startsWith('/with-getstaticprops')) {
     const url = req.nextUrl.clone()

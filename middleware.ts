@@ -13,6 +13,7 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     return NextResponse.rewrite(url)
   }
 
+  console.log('pathname', pathname)
   // Attempt 3: remove following rewrite.
   // // The critical thing
   // if (pathname.startsWith('/_next/data/')) {

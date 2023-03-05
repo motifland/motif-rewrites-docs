@@ -12,9 +12,9 @@ export default function App({ Component, pageProps }: AppProps) {
           overflowY: 'auto',
         }}
       >
-        {Array.from(Array(100).keys()).map((i) => (
+        {Array.from(Array(9).keys()).map((i) => (
           <div key={i}>
-            <Link href={`/docs/page${(i % 2) + 1}`}>Page {(i % 2) + 1}</Link>
+            <Link href={`/docs/page${i + 1}`}>Page {i + 1}</Link>
           </div>
         ))}
       </div>

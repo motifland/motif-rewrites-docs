@@ -27,9 +27,9 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     return NextResponse.rewrite(url)
   }
 
-  if (pathname.startsWith('/docs')) {
+  if (pathname.startsWith('/notworking')) {
     const url = req.nextUrl.clone()
-    url.pathname = `/domains/test${pathname}`
+    url.pathname = `/notworking${pathname}`
     return NextResponse.rewrite(url)
   }
 

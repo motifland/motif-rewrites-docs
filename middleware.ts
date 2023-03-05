@@ -25,7 +25,7 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
   // }
 
   // Attempt 4: use middleware rewrites.
-  if (pathname.startsWith('/with-')) {
+  if (pathname.startsWith('/docs')) {
     const url = req.nextUrl.clone()
     url.pathname = `/domains/test${pathname}`
     return NextResponse.rewrite(url)

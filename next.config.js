@@ -4,14 +4,16 @@
 // This WORKS!
 // ---------------------------------------------------
 // Attempt 2
+// Now we have middleware rewrites /docs/... to
+// /domains/.../docs./...
 // - Keep externalMiddlewareRewritesResolve here
 // - Remove skipMiddlewareUrlNormalize
-// This WORKS!
+// This doesn't work
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   assetPrefix: '/__motif/assets',
   reactStrictMode: true,
-  // skipMiddlewareUrlNormalize: true,
+  skipMiddlewareUrlNormalize: true,
   experimental: {
     externalMiddlewareRewritesResolve: true,
   },

@@ -25,11 +25,11 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
   //   return NextResponse.rewrite(url)
   // }
 
-  if (pathname.startsWith('/with-getstaticprops')) {
-    const url = req.nextUrl.clone()
-    url.pathname = `/with-getstaticprops${pathname}`
-    return NextResponse.rewrite(url)
-  }
+  // if (pathname.startsWith('/with-getstaticprops')) {
+  //   const url = req.nextUrl.clone()
+  //   url.pathname = `/with-getstaticprops${pathname}`
+  //   return NextResponse.rewrite(url)
+  // }
 
   return NextResponse.next()
 }

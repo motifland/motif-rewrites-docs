@@ -13,23 +13,23 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     return NextResponse.rewrite(url)
   }
 
-  if (pathname.startsWith('/_next/data/')) {
-    const url = req.nextUrl.clone()
-    const domainPath = 'domains'
-    const parts = pathname.split('/')
-    const newPathname = [
-      ...parts.slice(0, 4),
-      domainPath,
-      'test',
-      ...parts.slice(4),
-    ].join('/')
-    url.pathname = newPathname
-    return NextResponse.rewrite(url)
-  }
+  // if (pathname.startsWith('/_next/data/')) {
+  //   const url = req.nextUrl.clone()
+  //   const domainPath = 'domains'
+  //   const parts = pathname.split('/')
+  //   const newPathname = [
+  //     ...parts.slice(0, 4),
+  //     domainPath,
+  //     'test',
+  //     ...parts.slice(4),
+  //   ].join('/')
+  //   url.pathname = newPathname
+  //   return NextResponse.rewrite(url)
+  // }
 
-  if (pathname.startsWith('/withgsp')) {
+  if (pathname.startsWith('/with-getstaticprops')) {
     const url = req.nextUrl.clone()
-    url.pathname = `/withgsp${pathname}`
+    url.pathname = `/with-getstaticprops${pathname}`
     return NextResponse.rewrite(url)
   }
 

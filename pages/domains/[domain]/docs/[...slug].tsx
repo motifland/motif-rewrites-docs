@@ -30,6 +30,7 @@ export default function Slug() {
 
   return (
     <>
+      No static props
       <div>Query: {JSON.stringify(router.query)}</div>
     </>
   )

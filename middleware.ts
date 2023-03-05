@@ -1,8 +1,8 @@
 import { NextFetchEvent, NextRequest, NextResponse } from 'next/server'
 
-// export const config = {
-//   matcher: ['/((?!api|_next/static|favicon.ico|site.webmanifest).*)'],
-// }
+export const config = {
+  matcher: ['/((?!api|_next/static|favicon.ico|site.webmanifest).*)'],
+}
 
 export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
   const { pathname } = req.nextUrl
@@ -24,12 +24,6 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     url.pathname = newPathname
     return NextResponse.rewrite(url)
   }
-
-  // if (pathname.startsWith('/with-getstaticprops')) {
-  //   const url = req.nextUrl.clone()
-  //   url.pathname = `/with-getstaticprops${pathname}`
-  //   return NextResponse.rewrite(url)
-  // }
 
   return NextResponse.next()
 }

@@ -12,9 +12,16 @@ export default function App({ Component, pageProps }: AppProps) {
           overflowY: 'auto',
         }}
       >
+        <h4>With getStaticProps</h4>
         {Array.from(Array(3).keys()).map((i) => (
           <div key={i}>
-            <Link href={`/docs/page${i + 1}`}>Page {i + 1}</Link>
+            <Link href={`/docs-gsp/page${i + 1}`}>Page {i + 1}</Link>
+          </div>
+        ))}
+        <h4>Without getStaticProps</h4>
+        {Array.from(Array(3).keys()).map((i) => (
+          <div key={i}>
+            <Link href={`/docs-nogsp/page${i + 1}`}>Page {i + 1}</Link>
           </div>
         ))}
       </div>

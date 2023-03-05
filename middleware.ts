@@ -7,8 +7,6 @@ export const config = {
 export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
   const { pathname } = req.nextUrl
 
-  console.log('pathname', pathname)
-
   if (pathname.startsWith('/__motif/assets/_next/')) {
     const url = req.nextUrl.clone()
     url.pathname = pathname.replace(/^\/__motif\/assets/, '')
@@ -42,7 +40,7 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
   // }
 
   // Attempt 4: use middleware rewrites.
-  if (pathname.startsWith('/docs')) {
+  if (pathname.startsWith('/docs-')) {
     const url = req.nextUrl.clone()
     url.pathname = `/domains/test${pathname}`
     return NextResponse.rewrite(url)

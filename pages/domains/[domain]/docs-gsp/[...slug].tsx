@@ -24,14 +24,3 @@ export default function Slug({
     </>
   )
 }
-
-// export default function Slug() {
-//   const router = useRouter()
-
-//   return (
-//     <>
-//       No static props
-//       <div>Query: {JSON.stringify(router.query)}</div>
-//     </>
-//   )
-// }

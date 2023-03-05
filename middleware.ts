@@ -1,10 +1,5 @@
 import { NextFetchEvent, NextRequest, NextResponse } from 'next/server'
 
-// export const config = {
-//   // matcher: ['/((?!api|_next|static|favicon.ico|site.webmanifest).*)'],
-//   matcher: ['/((?!api|_next|static|favicon.ico|site.webmanifest).*)'],
-// }
-
 export const config = {
   // matcher: ['/((?!api|_next|static|favicon.ico|site.webmanifest).*)'],
   matcher: ['/((?!api|_next|static|favicon.ico|site.webmanifest).*)'],
@@ -31,7 +26,6 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
       ...parts.slice(4),
     ].join('/')
     url.pathname = newPathname
-    // console.log('pathname', pathname, url.pathname, newPathname)
     return NextResponse.rewrite(url)
   }
 

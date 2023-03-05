@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
       >
         {Array.from(Array(9).keys()).map((i) => (
           <div key={i}>
-            <Link href={`/docs/page${i + 1}`}>Page {i + 1}</Link>
+            <Link href={`/withgsp/page${i + 1}`}>Page {i + 1}</Link>
           </div>
         ))}
       </div>

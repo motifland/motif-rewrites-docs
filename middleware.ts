@@ -27,9 +27,9 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     return NextResponse.rewrite(url)
   }
 
-  if (pathname.startsWith('/notworking')) {
+  if (pathname.startsWith('/withgsp')) {
     const url = req.nextUrl.clone()
-    url.pathname = `/notworking${pathname}`
+    url.pathname = `/withgsp${pathname}`
     return NextResponse.rewrite(url)
   }
 

@@ -7,6 +7,8 @@ export const config = {
 export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
   const { pathname } = req.nextUrl
 
+  console.log('pathname', pathname)
+
   if (pathname.startsWith('/__motif/assets/_next/')) {
     const url = req.nextUrl.clone()
     url.pathname = pathname.replace(/^\/__motif\/assets/, '')

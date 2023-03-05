@@ -19,7 +19,7 @@
 const nextConfig = {
   assetPrefix: '/__motif/assets',
   reactStrictMode: true,
-  // skipMiddlewareUrlNormalize: true,
+  skipMiddlewareUrlNormalize: true,
   experimental: {
     externalMiddlewareRewritesResolve: true,
   },

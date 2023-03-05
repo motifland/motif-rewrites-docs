@@ -13,6 +13,7 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     return NextResponse.rewrite(url)
   }
 
+  // Attempt 3: remove following rewrite.
   // // The critical thing
   // if (pathname.startsWith('/_next/data/')) {
   //   const url = req.nextUrl.clone()
@@ -22,6 +23,12 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
   //   console.log('newPathname', JSON.stringify(newPathname, null, 2))
   //   return NextResponse.rewrite(url)
   // }
+
+  if (pathname.startsWith('/with-')) {
+    const url = req.nextUrl.clone()
+    url.pathname = `/domains-test${pathname}`
+    return NextResponse.rewrite(url)
+  }
 
   return NextResponse.next()
 }

@@ -13,12 +13,14 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     return NextResponse.rewrite(url)
   }
 
-  // if (pathname.startsWith('/docs-')) {
-  //   // Rewrite
-  //   const url = req.nextUrl.clone()
-  //   url.pathname = `/domains/test${pathname}`
-  //   return NextResponse.rewrite(url)
-  // }
+  // Without this middleware rewrite, everything works as expected on
+  // prod. With the rewrite, it only works on localhost.
+  if (pathname.startsWith('/docs-')) {
+    // Rewrite /docs- to /domains/test/docs-
+    const url = req.nextUrl.clone()
+    url.pathname = `/domains/test${pathname}`
+    return NextResponse.rewrite(url)
+  }
 
   return NextResponse.next()
 }

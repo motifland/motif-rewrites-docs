@@ -6,6 +6,7 @@ export default function Slug() {
 
   return (
     <>
+      <div>With middleware rewrite, without getStaticProps</div>
       <div>Query: {JSON.stringify(router.query)}</div>
     </>
   )

@@ -15,7 +15,10 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
 
   // Without this middleware rewrite, everything works as expected on
   // prod. With the rewrite, it only works on localhost.
-  if (pathname.startsWith('/docs-gsp') || pathname.startsWith('/docs-nogsp')) {
+  if (
+    pathname.startsWith('/docs-rewrite-gsp') ||
+    pathname.startsWith('/docs-rewrite-nogsp')
+  ) {
     // Rewrite /docs- to /domains/test/docs-
     const url = req.nextUrl.clone()
     url.pathname = `/domains/test${pathname}`

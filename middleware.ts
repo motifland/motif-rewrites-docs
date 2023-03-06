@@ -13,25 +13,12 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     return NextResponse.rewrite(url)
   }
 
-  // if (pathname.startsWith('/_next/data/')) {
+  // if (pathname.startsWith('/docs-')) {
+  //   // Rewrite
   //   const url = req.nextUrl.clone()
-  //   const parts = pathname.split('/')
-  //   const newPathname = [
-  //     ...parts.slice(0, 4),
-  //     'domains',
-  //     'test',
-  //     ...parts.slice(4),
-  //   ].join('/')
-  //   url.pathname = newPathname
-  //   console.log('newPathname', JSON.stringify(newPathname, null, 2))
+  //   url.pathname = `/domains/test${pathname}`
   //   return NextResponse.rewrite(url)
   // }
-
-  if (pathname.startsWith('/docs-')) {
-    const url = req.nextUrl.clone()
-    url.pathname = `/domains/test${pathname}`
-    return NextResponse.rewrite(url)
-  }
 
   return NextResponse.next()
 }

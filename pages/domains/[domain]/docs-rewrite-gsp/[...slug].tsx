@@ -20,7 +20,7 @@ export default function Slug({
 
   return (
     <>
-      <div>With middleware rewrite, with getStaticProps</div>
+      <div>With middleware rewrite, with getStaticProps (updated)</div>
       <div>Params: {JSON.stringify(params)}</div>
     </>
   )
